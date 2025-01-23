@@ -48,9 +48,11 @@ Here are some examples of how the countdown works:
 - **Countdown Timer**  
   ![Countdown Timer](https://cdn.discordapp.com/attachments/1274676214233305180/1332077808826060840/image.png?ex=6793f1a2&is=6792a022&hm=fae8a105fd666da36da2b73fef11b808a5e9be74feccee10fc4ed1a40fb431ce&)
 
-- **Add Birthday Page**  
-  ![DEMO](https://alice-birthday-counter.glitch.me/?theme=nature)
 
+- **Demo Page**  
+```bash
+  https://alice-birthday-counter.glitch.me/?theme=nature
+```
 
 ## 💡 How It Works
 1. Add the date of the birthday you want to track.
