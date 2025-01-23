@@ -1,7 +1,7 @@
 # 🎉 Birthday Counter
 
 
-![Birthday Countdown](https://via.placeholder.com/800x300?text=Birthday+Countdown+Banner)
+![Birthday Countdown](https://media.discordapp.net/attachments/1274676214233305180/1332078878276980878/happy-birthday.png?ex=6793f2a1&is=6792a121&hm=79489b6808dd067841f3ad1f277337a24a279b9c3aacb52925305276e2fa418f&=&format=webp&quality=lossless&width=417&height=417)
 
 This project is a simple yet powerful **Birthday Countdown** tool. Track upcoming birthdays or special events and never miss a celebration! 🎂  
 
