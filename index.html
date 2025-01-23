@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>birthday counter</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="theme-modern">
+    <div class="theme-selector">
+        <button class="theme-btn" onclick="setTheme('modern')">Modern</button>
+        <button class="theme-btn" onclick="setTheme('pastel')">Pastel</button>
+        <button class="theme-btn" onclick="setTheme('neon')">Neon</button>
+        <button class="theme-btn" onclick="setTheme('nature')">Nature</button>
+    </div>
+
+    <div class="container">
+        <div class="content-box animate__animated animate__fadeIn">
+            <div id="creator">
+                <h1>Birthday Counter</h1>
+                <div class="input-section">
+                    <input type="text" id="personName" placeholder="Name (optional)" class="animate__animated animate__fadeInLeft">
+                    <input type="date" id="birthdayDate" class="animate__animated animate__fadeInRight">
+                    <button onclick="generateLink()" class="animate__animated animate__fadeInUp">Create Counter</button>
+                </div>
+                <div id="linkSection" class="hidden">
+                    <input type="text" id="birthdayLink" readonly>
+                    <button onclick="copyLink()" class="copy-btn">Copy Link</button>
+                </div>
+            </div>
+
+            <div id="countdown" class="hidden">
+                <h1 id="countdown-title">Until Birthday</h1>
+                <div class="countdown">
+                    <div class="countdown-item animate__animated animate__fadeInUp">
+                        <div id="days" class="countdown-value">00</div>
+                        <div class="countdown-label">Day</div>
+                    </div>
+                    <div class="countdown-item animate__animated animate__fadeInUp">
+                        <div id="hours" class="countdown-value">00</div>
+                        <div class="countdown-label">Hour</div>
+                    </div>
+                    <div class="countdown-item animate__animated animate__fadeInUp">
+                        <div id="minutes" class="countdown-value">00</div>
+                        <div class="countdown-label">Minute</div>
+                    </div>
+                    <div class="countdown-item animate__animated animate__fadeInUp">
+                        <div id="seconds" class="countdown-value">00</div>
+                        <div class="countdown-label">Second</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,242 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+    min-height: 100vh;
+    background-size: 400% 400%;
+    transition: all 0.8s ease;
+    animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.container {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.content-box {
+    width: 95%;
+    max-width: 800px;
+    padding: 2.5rem;
+    margin: 20px auto;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    transition: all 0.5s ease;
+    backdrop-filter: blur(10px);
+}
+
+.content-box:hover {
+    box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+    transform: translateY(-5px);
+}
+
+h1 {
+    margin-bottom: 1.5rem;
+    background: linear-gradient(45deg, #333, #666);
+    -webkit-background-clip: text;
+    animation: titleFloat 3s ease-in-out infinite;
+    text-align: center;
+    font-size: 2.5em;
+    -webkit-text-fill-color: transparent;
+}
+
+.input-section {
+    display: flex;
+    flex-direction: column;
+    margin: 1.5rem 0;
+    gap: 1rem;
+}
+
+input {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid #ddd;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.9);
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+input:focus {
+    border-color: #0066ff;
+    outline: none;
+    box-shadow: 0 0 15px rgba(0,102,255,0.2);
+}
+
+button {
+    width: 100%;
+    padding: 1rem;
+    margin-top: 0.5rem;
+    border: none;
+    border-radius: 12px;
+    color: white;
+    background: linear-gradient(45deg, #0066ff, #5e9fff);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+button:hover {
+    background: linear-gradient(45deg, #005ae6, #4a8fff);
+    box-shadow: 0 8px 20px rgba(0,102,255,0.3);
+    transform: translateY(-2px);
+}
+
+.countdown {
+    display: grid;
+    margin: 2rem 0;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+.countdown-item {
+    padding: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 15px;
+    background: rgba(0, 0, 0, 0.2);
+    transition: all 0.4s ease;
+    text-align: center;
+    backdrop-filter: blur(5px);
+}
+.theme-modern .countdown-item {
+    color: white;
+    background: rgba(0, 0, 0, 0.3);
+}
+.theme-pastel .countdown-item {
+    color: #333;
+    background: rgba(0, 0, 0, 0.1);
+}
+.theme-neon .countdown-item {
+    border: 2px solid #0ff;
+    color: #0ff;
+    background: rgba(0, 0, 0, 0.5);
+}
+.theme-nature .countdown-item {
+    color: white;
+    background: rgba(0, 0, 0, 0.3);
+}
+.countdown-value {
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.countdown-label {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 1rem;
+}
+
+.theme-selector {
+    position: fixed;
+    z-index: 1000;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    max-width: 200px;
+    gap: 0.5rem;
+}
+
+.theme-btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 8px;
+    color: inherit;
+    background: rgba(255, 255, 255, 0.2);
+    font-size: 0.9rem;
+    backdrop-filter: blur(5px);
+}
+
+#linkSection {
+    margin-top: 1.5rem;
+}
+
+#birthdayLink {
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .countdown {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .content-box {
+        padding: 1.5rem;
+    }
+
+    .theme-selector {
+        top: 10px;
+        right: 10px;
+        max-width: 150px;
+    }
+}
+
+/* Theme Styles */
+.theme-modern {
+    color: white;
+    background: linear-gradient(-45deg, #2c3e50, #3498db, #2980b9, #2c3e50);
+}
+
+.theme-pastel {
+    color: #444;
+    background: linear-gradient(-45deg, #ffafbd, #ffc3a0, #ffd1ff, #bdefff);
+}
+
+.theme-neon {
+    color: #fff;
+    background: #000;
+}
+
+.theme-nature {
+    color: white;
+    background: linear-gradient(-45deg, #134e5e, #71b280, #2c5364, #0f2027);
+}
+
+.celebration {
+    margin: 2rem 0;
+    background: linear-gradient(45deg, #ff0, #f0f, #0ff);
+    -webkit-background-clip: text;
+    animation: celebrate 2s infinite;
+    text-align: center;
+    font-size: 2em;
+    -webkit-text-fill-color: transparent;
+}
+
+@keyframes celebrate {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+.hidden {
+    display: none !important;
+}
+
